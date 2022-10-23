@@ -93,8 +93,8 @@ body {
   width: 25%;
   text-align: center;
 }
-.all_main_left i {
-  font-size: 75px;
+.all_main_left img {
+  width: 150px;
 }
 .all_main_center {
   width: 40%;
@@ -138,10 +138,10 @@ body {
   display: block;
 }
 
-#current-max-temp,
-#current-min-temp,
-#current-humidity,
-#current-wind {
+#max-temp,
+#min-temp,
+#humidity,
+#wind {
   display: inline;
 }
 .all_main_right {
