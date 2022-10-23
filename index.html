@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/00a33a78fd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="all">
+      <div class="all_block-search">
+        <form id="search-form">
+          <input type="search" placeholder="Enter a city" id="search-field" />
+          <button type="submit">Search</button>
+        </form>
+        <button class="all_block-search_current" id="current-but">Current</button>
+      </div>
+
+      <div class="all_city">
+        <h1 id="city">Kharkiv</h1>
+      </div>
+
+      <div class="all_update">
+        <span id="last-update-time">Last update: 19:01</span>
+        <span id="last-update-date">Tuesday October 4, 2022</span>
+      </div>
+
+      <div class="all_main">
+        <div class="all_main_left">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="all_main_center">
+          <div class="all_main_center_temp">
+            <span class="all_main_center_temp_num" id="current-temp"></span>
+            <span class="all_main_center_temp_cf">
+              <a href="#" id="c" class="selected-temp">°C</a> |
+              <a href="#" id="f">°F</a>
+            </span>
+          </div>
+          <div class="all_main_center_maxmin">
+            <div>
+              <span>Max: <div id="current-max-temp"></div>°C</span>
+              <span>Min: <div id="current-min-temp"></div>°C</span>
+            </div>
+          </div>
+        </div>
+        <div class="all_main_right">
+          <div>
+            <span>Humidity: <div id="current-humidity"></div>%</span>
+            <span>Wind: <div id="current-wind"></div> m/s</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="all_future">
+        <div class="all_future_card">
+          <div class="all_future_card_day">
+            <span>Wed</span>
+            <span>5/10</span>
+          </div>
+          <div class="all_future_card_icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="all_future_card_temp">17°/19°</div>
+        </div>
+
+        <div class="all_future_card">
+          <div class="all_future_card_day">
+            <span>Thu</span>
+            <span>6/10</span>
+          </div>
+          <div class="all_future_card_icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="all_future_card_temp">17°/19°</div>
+        </div>
+
+        <div class="all_future_card">
+          <div class="all_future_card_day">
+            <span>Fri</span>
+            <span>7/10</span>
+          </div>
+          <div class="all_future_card_icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="all_future_card_temp">17°/19°</div>
+        </div>
+
+        <div class="all_future_card">
+          <div class="all_future_card_day">
+            <span>Sat</span>
+            <span>8/10</span>
+          </div>
+          <div class="all_future_card_icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="all_future_card_temp">17°/19°</div>
+        </div>
+
+        <div class="all_future_card">
+          <div class="all_future_card_day">
+            <span>Sun</span>
+            <span>9/10</span>
+          </div>
+          <div class="all_future_card_icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="all_future_card_temp">17°/19°</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
