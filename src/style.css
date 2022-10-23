@@ -87,15 +87,24 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 25px auto;
+  margin: 40px auto;
 }
 .all_main_left {
   width: 25%;
   text-align: center;
 }
 .all_main_left img {
-  width: 150px;
+  width: 80px;
 }
+
+.all_main_left div {
+  margin-top: 5px;
+}
+
+.all_main_left div:first-letter {
+  text-transform: uppercase
+}
+
 .all_main_center {
   width: 40%;
   text-align: center;
@@ -176,10 +185,15 @@ body {
 }
 /*.all_future_card_temp {
 }*/
-.all_github-link {
+footer {
+  margin-top: 30px;
+}
+footer .all_github-link,
+footer .all_icons-links {
   text-align: center;
   margin-top: 20px;
 }
-.all_github-link a {
+footer .all_github-link a,
+footer .all_icons-links a {
   color: #D590A7;
 }

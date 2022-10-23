@@ -140,7 +140,10 @@ function showHumidityWind(response) {
 }
 
 function showWeatherIcon(response) {
-  
+  let weatherIcon = document.querySelector("#weater-icon");
+  weatherIcon.setAttribute("src", `photos/${response.data.weather[0].icon}.png`)
+  let weatherDescription = document.querySelector("#weather-description");
+  weatherDescription.innerHTML = response.data.weather[0].description;
 }
 
 function getCurrentLocation(position) {
