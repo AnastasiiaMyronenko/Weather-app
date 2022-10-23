@@ -176,3 +176,10 @@ body {
 }
 /*.all_future_card_temp {
 }*/
+.all_github-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.all_github-link a {
+  color: #D590A7;
+}
