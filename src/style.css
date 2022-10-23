@@ -27,17 +27,19 @@ body {
 .all_block-search form input {
   width: 300px;
   height: 30px;
-  border: 1px solid #b3acac;
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 0px 8px;
   font-family: "Hepta Slab", serif;
   font-size: 15px;
   outline: 0;
 }
+
 .all_block-search form button {
   width: 100px;
   height: 30px;
-  border: 1px solid #b3acac;
+  /*border: 1px solid #b3acac;*/
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 0px 8px;
   margin-left: 20px;
@@ -48,12 +50,15 @@ body {
 }
 .all_block-search form button:hover {
   background: #fff2f3;
+  border: 1px solid #fff2f3;
   cursor: pointer;
+
 }
 .all_block-search_current {
   width: 100px;
   height: 30px;
-  border: 1px solid #b3acac;
+  /*border: 1px solid #b3acac;*/
+  border: 1px solid #fff;
   border-radius: 4px;
   padding: 0px 8px;
   margin-left: 20px;
@@ -65,7 +70,9 @@ body {
 
 .all_block-search_current:hover {
   background: #fff2f3;
+  border: 1px solid #fff2f3;
   cursor: pointer;
+
 }
 /*.all_city {
 }*/
