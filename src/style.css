@@ -171,26 +171,26 @@ body {
 .all_main_right div span {
   display: block;
 }
-.all_future {
+.all_forecast {
   display: flex;
   justify-content: space-around;
 }
-.all_future_card {
+.all_forecast_card {
   text-align: center;
 }
-.all_future_card_day {
+.all_forecast_card_day {
   margin: 10px auto;
 }
-.all_future_card_day span {
+.all_forecast_card_day span {
   display: block;
 }
-.all_future_card_icon {
+.all_forecast_card_icon {
   margin-bottom: 10px;
 }
-.all_future_card_icon i {
+.all_forecast_card_icon i {
   font-size: 25px;
 }
-/*.all_future_card_temp {
+/*.all_forecast_card_temp {
 }*/
 footer {
   margin-top: 30px;

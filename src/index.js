@@ -158,6 +158,25 @@ function showCurrentCity(response) {
   weatherAPI(response.data[0].name);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = "";
+  for(let i = 0; i < 5; i++){
+    forecastHTML = forecastHTML + `
+    <div class="all_forecast_card">
+      <div class="all_forecast_card_day">
+        <span>Wed</span>
+        <span>5/10</span>
+      </div>
+      <div class="all_forecast_card_icon">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <div class="all_forecast_card_temp">17°/19°</div>
+    </div>`
+  }
+  forecast.innerHTML = forecastHTML;
+}
+
 currentDateAndTime();
 
 let searchForm = document.querySelector("#search-form");
@@ -171,4 +190,5 @@ currentButton.addEventListener("click", function (){
   navigator.geolocation.getCurrentPosition(getCurrentLocation);
 });
 
+displayForecast();
 
