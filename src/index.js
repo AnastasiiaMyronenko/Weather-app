@@ -64,6 +64,7 @@ function weatherAPI(city) {
     showMinMaxTemp(response);
     showHumidityWind(response);
     showWeatherIcon(response);
+    getForecast(response.data.coord)
   });
 }
 
@@ -81,7 +82,6 @@ function showCity(response) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
   let tempC = document.querySelector("#temp");
   tempC.innerHTML = Math.round(response.data.main.temp);
 }
@@ -158,7 +158,13 @@ function showCurrentCity(response) {
   weatherAPI(response.data[0].name);
 }
 
-function displayForecast() {
+function getForecast(coords) {
+  let apiKey = "1ee4264117b73d2263eecd562f31ef5c";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
   for(let i = 0; i < 5; i++){
@@ -175,6 +181,7 @@ function displayForecast() {
     </div>`
   }
   forecast.innerHTML = forecastHTML;
+  console.log(response.data);
 }
 
 currentDateAndTime();
@@ -190,5 +197,4 @@ currentButton.addEventListener("click", function (){
   navigator.geolocation.getCurrentPosition(getCurrentLocation);
 });
 
-displayForecast();
 
