@@ -141,7 +141,8 @@ function showHumidityWind(response) {
 
 function showWeatherIcon(response) {
   let weatherIcon = document.querySelector("#weater-icon");
-  weatherIcon.setAttribute("src", `photos/${response.data.weather[0].icon}.png`)
+  weatherIcon.setAttribute("src", `photos/${response.data.weather[0].icon}.png`);
+  weatherIcon.setAttribute("alt", `${response.data.weather[0].description}`);
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.weather[0].description;
 }
@@ -191,7 +192,7 @@ function displayForecast(response) {
     </div>`
   }
   forecast.innerHTML = forecastHTML;
-  console.log(response.data.daily);
+
 }
 
 currentDateAndTime();
