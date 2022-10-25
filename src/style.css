@@ -187,8 +187,8 @@ body {
 .all_forecast_card_icon {
   margin-bottom: 10px;
 }
-.all_forecast_card_icon i {
-  font-size: 25px;
+.all_forecast_card_icon img {
+  width: 40px;
 }
 /*.all_forecast_card_temp {
 }*/

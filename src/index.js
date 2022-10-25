@@ -167,21 +167,31 @@ function getForecast(coords) {
 function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
-  for(let i = 0; i < 5; i++){
+  let days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ];
+  for(let i = 1; i <= 5; i++){
+    let futureDate = new Date(response.data.daily[i].dt * 1000);
     forecastHTML = forecastHTML + `
     <div class="all_forecast_card">
       <div class="all_forecast_card_day">
-        <span>Wed</span>
-        <span>5/10</span>
+        <span>${days[futureDate.getDay()]}</span>
+        <span>${futureDate.getDate()}/${futureDate.getMonth() + 1}</span>
       </div>
       <div class="all_forecast_card_icon">
-        <i class="fa-solid fa-bolt"></i>
+        <img src="photos/${response.data.daily[i].weather[0].icon}.png" alt="" id="forecast-weater-icon">
       </div>
-      <div class="all_forecast_card_temp">17°/19°</div>
+      <div class="all_forecast_card_temp">${Math.round(response.data.daily[i].temp.min)}°/${Math.round(response.data.daily[i].temp.max)}°</div>
     </div>`
   }
   forecast.innerHTML = forecastHTML;
-  console.log(response.data);
+  console.log(response.data.daily);
 }
 
 currentDateAndTime();
